@@ -1,0 +1,48 @@
+{
+  "name": "sparsm",
+  "description": "sparsm is a component based CSS Framework created using Sass.",
+  "version": "1.0.0",
+  "main": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "browser-sync": "^2.27.7",
+    "cssnano": "^5.0.16",
+    "eslint": "^8.8.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "prettier": "^2.5.1",
+    "sass": "^1.49.7"
+  },
+  "scripts": {
+    "start": "browser-sync --start server --port 5050 --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rahulbaran/sparsm.git"
+  },
+  "keywords": [
+    "sparsm",
+    "css",
+    "framework",
+    "sparsm",
+    "framework",
+    "sass",
+    "framework",
+    "component",
+    "based",
+    "framework",
+    "sparsm",
+    "css",
+    "framework"
+  ],
+  "author": "Rahulbaran",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Rahulbaran/sparsm/issues"
+  },
+  "homepage": "https://github.com/Rahulbaran/sparsm#readme"
+}
