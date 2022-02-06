@@ -1,0 +1,59 @@
+/*!==============================
+* Text Colors Utility Classes
+===============================*/
+@each $key, $val in $colors {
+  .txt-#{$key} {
+    color: $val;
+  }
+  .txt-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+
+  @if ($key != "white" and $key != "black") {
+    @for $j from 1 to 10 {
+      // Light Color Variants
+      .txt-#{$key}-light-#{$j} {
+        color: mix(white, $val, $j * 10);
+      }
+      .txt-hover-#{$key}-light-#{$j} {
+        &:hover {
+          color: mix(white, $val, $j * 10);
+        }
+      }
+
+      // Dark Color Variants
+      .txt-#{$key}-dark-#{$j} {
+        color: mix(black, $val, $j * 10);
+      }
+      .txt-hover-#{$key}-dark-#{$j} {
+        &:hover {
+          color: mix(black, $val, $j * 10);
+        }
+      }
+    }
+  }
+}
+
+/*!=============================
+* Background Colors Utility Classes 
+==============================*/
+@each $key, $val in $colors {
+  .bg-#{$key} {
+    background-color: $val;
+  }
+
+  @if ($key != "white" and $key != "black") {
+    @for $j from 1 to 10 {
+      // Background Color Light Variants
+      .bg-#{$key}-light-#{$j} {
+        background-color: mix(white, $val, $j * 10);
+      }
+      // Background Color Dark Variants
+      .bg-#{$key}-dark-#{$j} {
+        background-color: mix(black, $val, $j * 10);
+      }
+    }
+  }
+}

@@ -1,3 +1,10 @@
+# logs cache
+log
+*.log
+
+# Dependency Directories
 node_modules
-__pycache__
-.env
+
+
+# VSCode Version cache
+.vscode

@@ -1,0 +1,42 @@
+// * Font Sizes
+$font-base-size: 1rem;
+$font-sm: $font-base-size * 0.75;
+$font-md: $font-base-size * 1;
+$font-lg: $font-base-size * 1.5;
+$font-xl: $font-base-size * 2;
+$font-xxl: $font-base-size * 3;
+
+// * Font Weights
+$font-wt-400: 400;
+$font-wt-500: 500;
+
+// * Color Palettes
+$colors: (
+  "primary": hsl(221, 85%, 56%),
+  "secondary": hsl(157, 77%, 44%),
+  "error": hsl(345, 69%, 49%),
+  "info": hsl(46, 92%, 54%),
+  "red": hsl(0, 80%, 50%),
+  "orange": hsl(20, 100%, 50%),
+  "yellow": hsl(60, 90%, 50%),
+  "limegreen": hsl(90, 80%, 50%),
+  "green": hsl(120, 90%, 50%),
+  "cyan": hsl(170, 80%, 50%),
+  "purple": hsl(260, 80%, 50%),
+  "pink": hsl(320, 80%, 50%),
+  "blue": hsl(240, 80%, 50%),
+  "grey": hsl(0, 0%, 50%),
+  "black": hsl(0, 100%, 0%),
+  "white": hsl(0, 100%, 100%)
+);
+
+// * Borders
+$base-border-radius: 20px;
+$base-border-width: 1px;
+
+// * Spacing
+$base-padding: 0.6rem;
+$base-margin: 0.6rem;
+
+// * Box-Shadow
+$base-box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.1);
