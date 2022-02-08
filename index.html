@@ -12,20 +12,20 @@
       body {
         font-size: 1.4rem;
         font-weight: 500;
-        /* writing-mode: vertical-rl; */
+        font-family: "Montserrat", sans-serif;
       }
 
       .container {
         padding: 0.5rem;
       }
 
-      section:first-of-type div {
+      section > div {
         display: flex;
         gap: 0.4rem;
         flex-wrap: wrap;
       }
 
-      section:first-child h2 {
+      section h2 {
         text-decoration: underline 3px currentColor;
         text-underline-offset: 2px;
         display: inline-block;
@@ -41,14 +41,22 @@
         border-start-end-radius: 8px;
         border-end-start-radius: 8px;
         border-end-end-radius: 4px;
-        /* flex: 1 0 0;
-        width: max-content; */
+      }
+
+      .btns--wrapper {
+        border-block-start: 1px solid currentColor;
+        margin-block-start: 1rem;
+      }
+
+      .btns--wrapper button {
+        font-family: inherit;
+        padding-block: 0.8rem;
       }
     </style>
   </head>
   <body>
     <main class="container">
-      <section>
+      <section class="texts--wrapper">
         <h2 class="txt-orange txt-hover-orange-dark-5">Text Colors</h2>
         <div>
           <span class="txt-primary">I am Text</span>
@@ -68,6 +76,43 @@
             >I am Text</span
           >
           <span class="txt-grey txt-hover-blue-dark-9">I am Text</span>
+        </div>
+      </section>
+
+      <section class="btns--wrapper">
+        <h2 class="txt-green-dark-3 txt-hover-primary-dark-4">Buttons</h2>
+        <div>
+          <button
+            class="btn btn--primary btn--hover--primary--light--3 txt-white"
+          >
+            Button
+          </button>
+          <button
+            class="btn btn--secondary btn--hover--secondary--dark--2 txt-white"
+          >
+            Button
+          </button>
+
+          <button
+            class="btn btn--info btn--hover--info--light--2 txt-grey-dark-7"
+          >
+            Button
+          </button>
+          <button
+            class="btn btn--red--light--1 btn--hover--red--dark--2 txt-white"
+          >
+            Button
+          </button>
+
+          <button class="btn btn--error btn--hover--error--light--2 txt-white">
+            Button
+          </button>
+
+          <button
+            class="btn btn--limegreen btn--hover--limegreen--dark--1 txt-green-dark-8"
+          >
+            Button
+          </button>
         </div>
       </section>
     </main>
