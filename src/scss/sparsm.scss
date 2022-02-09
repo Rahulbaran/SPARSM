@@ -1,11 +1,18 @@
 /*-------------- Sass Modules ----------------*/
 
+@import "Functions";
 @import "Variables";
 @import "Base";
 @import "Mixins";
-@import "Colors";
-@import "Typography";
 
+/*----- Utility Classes for text & background color -----*/
+@import "Colors";
+
+/*-------- Components for button, card & table ---------*/
 @import "components/Button";
 @import "components/Card";
 @import "components/Table";
+
+
+/*------- Utility Classes for padding, margin, opacity, box-shadow, display & font-size -------*/
+@import "Utilities"

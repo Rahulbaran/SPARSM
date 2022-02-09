@@ -1,0 +1,20 @@
+@use "sass:math";
+/*!==============================
+ Card based Components 
+ ===============================*/
+.card {
+  border: 1px solid currentColor;
+  padding: $base-padding;
+  border-radius: math.div($base-border-radius, 5);
+  display: block;
+
+  &__title {
+    font-size: $font-xl;
+    margin-block-end: $base-margin;
+    line-height: 1;
+  }
+
+  &__text--label {
+    font-size: $font-md;
+  }
+}

@@ -1,37 +1,35 @@
-@use "sass:math";
-
+/*!================================
+ BUTTONS COMPONENTS 
+ =================================*/
 .btn {
-  padding: $base-padding $base-padding * 2;
-  border-radius: math.div($base-border-radius, 5);
-  display: inline-block;
-  cursor: pointer;
-  font-weight: 500;
-  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
-  font-size: $font-md;
-  border: none;
+  @include btn;
 }
+
 @each $key, $val in $colors {
-  .btn--#{$key} {
-    background-color: $val;
+  .btn-#{$key} {
+    @include btn($val);
+
+    &:hover {
+      background-color: lighten($val, 10);
+    }
   }
 
-  @if ($val != white and $val != black) {
-    @for $i from 1 through 9 {
-      //Light Variants For Button
-      .btn--#{$key}--light--#{$i} {
-        background-color: mix(white, $val, $i * 10);
-      }
-      .btn--hover--#{$key}--light--#{$i}:hover {
-        background-color: mix(white, $val, $i * 10);
-      }
+  .btn-outlined-#{$key} {
+    @include btn(#fff);
+    border: $base-border-width solid $val;
 
-      // Dark Variants For Button
-      .btn--#{$key}--dark--#{$i} {
-        background-color: mix(black, $val, $i * 10);
-      }
-      .btn--hover--#{$key}--dark--#{$i}:hover {
-        background-color: mix(black, $val, $i * 10);
-      }
+    &:hover {
+      background-color: $val;
+    }
+  }
+
+  .btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
     }
   }
 }

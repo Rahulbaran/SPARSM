@@ -15,10 +15,6 @@
         font-family: "Montserrat", sans-serif;
       }
 
-      .container {
-        padding: 0.5rem;
-      }
-
       section > div {
         display: flex;
         gap: 0.4rem;
@@ -29,7 +25,6 @@
         text-decoration: underline 3px currentColor;
         text-underline-offset: 2px;
         display: inline-block;
-        margin-block-end: 0.5rem;
       }
 
       section:first-child span {
@@ -52,12 +47,24 @@
         font-family: inherit;
         padding-block: 0.8rem;
       }
+
+      .cards--wrapper > div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+
+      .card {
+        min-width: 300px;
+        flex-basis: 32.5%;
+        flex-grow: 1;
+      }
     </style>
   </head>
   <body>
-    <main class="container">
+    <main class="container p-1">
       <section class="texts--wrapper">
-        <h2 class="txt-orange txt-hover-orange-dark-5">Text Colors</h2>
+        <h2 class="txt-orange txt-hover-orange-dark-5 mb-1">Text Colors</h2>
         <div>
           <span class="txt-primary">I am Text</span>
           <span class="txt-secodary txt-hover-green-dark-5 bg-limegreen-light-9"
@@ -80,39 +87,58 @@
       </section>
 
       <section class="btns--wrapper">
-        <h2 class="txt-green-dark-3 txt-hover-primary-dark-4">Buttons</h2>
+        <h2 class="txt-green-dark-3 txt-hover-primary-dark-4 mb-1">Buttons</h2>
         <div>
-          <button
-            class="btn btn--primary btn--hover--primary--light--3 txt-white"
-          >
-            Button
-          </button>
-          <button
-            class="btn btn--secondary btn--hover--secondary--dark--2 txt-white"
-          >
-            Button
-          </button>
+          <button class="btn-primary txt-white">Button</button>
+          <button class="btn-secondary txt-white">Button</button>
+          <button class="btn-info txt-grey-dark-7">Button</button>
+          <button class="btn btn-complement-pink">Button</button>
+          <button class="btn-outlined-error txt-blue-dark-9">Button</button>
+          <button class="btn-complement-red">Button</button>
+        </div>
+      </section>
 
-          <button
-            class="btn btn--info btn--hover--info--light--2 txt-grey-dark-7"
-          >
-            Button
-          </button>
-          <button
-            class="btn btn--red--light--1 btn--hover--red--dark--2 txt-white"
-          >
-            Button
-          </button>
+      <section class="cards--wrapper">
+        <h2 class="txt-grey-dark-2 mb-1">Cards</h2>
+        <div>
+          <div class="card bg-cyan-dark-9 br">
+            <div class="card__header">
+              <h1 class="card__title txt-limegreen">Hello I am Rahul</h1>
+            </div>
+            <div class="card__body">
+              <p class="card__text--label txt-green">
+                This is a card component Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Quo perspiciatis earum debitis fugit, iure qui
+                consequuntur ipsa illo ducimus ex!
+              </p>
+            </div>
+          </div>
 
-          <button class="btn btn--error btn--hover--error--light--2 txt-white">
-            Button
-          </button>
+          <div class="card br-sm bg-blue-dark-4">
+            <div class="card__header">
+              <h1 class="card__title txt-primary">Hello I am Rahul</h1>
+            </div>
+            <div class="card__body">
+              <p class="card__text--label txt-primary-light-2">
+                This is a card component Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Quo perspiciatis earum debitis fugit, iure qui
+                consequuntur ipsa illo ducimus ex!
+              </p>
+            </div>
+          </div>
 
-          <button
-            class="btn btn--limegreen btn--hover--limegreen--dark--1 txt-green-dark-8"
-          >
-            Button
-          </button>
+          <div class="card br-tr-full">
+            <div class="card__header">
+              <h1 class="card__title txt-primary">Hello I am Rahul</h1>
+            </div>
+            <div class="card__body">
+              <p class="card__text--label txt-primary-light-2">
+                This is a card component Lorem, ipsum dolor sit amet consectetur
+                adipisicing elit. Quo perspiciatis earum debitis fugit, iure qui
+                consequuntur ipsa illo ducimus ex!
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
